@@ -1,15 +1,18 @@
 import './App.css'
-import Header from "./components/header"
-import Title from "./components/Title"
-import ComponentePadre from './components/ComponentePadre'
+import ItemListContainer from './components/Main/ItemListContainer'
+import NavBar from './components/Navbar/NavBar'
 
 function App() {
   return (
     <div>
-        <Header/>
-        <Title/>
-        <ComponentePadre text={'Hola a todos y todas'}/>
+      <nav>
+        <NavBar/>
+      </nav>
+      <main>
+        <ItemListContainer Greeting="Hola Mundo!" />
+      </main>
     </div>
+    
   )
 }
 

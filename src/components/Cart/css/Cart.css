@@ -6,11 +6,21 @@ font-family: "Fjalla One", sans-serif;
 font-family: "Quicksand", sans-serif;
 */
 
-body{
-    margin: 0;
-    font-family:"Fjalla One",sans-serif;
+.Carrito{
+    color:white;
+}
+.Carrito span{
     font-size: 1rem;
-    font-weight: 400;
-    color: #383838;
-    background-color: #ffffff;
+    font-family: "Quicksand",sans-serif;
+    translate: -0.7rem 0rem;
+}
+#CartLogo{
+    transition: 0.5s ease-out;
+}
+#CartLogo::before{
+    translate: 5px -5px;
+}
+#CartLogo:hover{
+    cursor: pointer;
+    translate: -5px 5px;
 }

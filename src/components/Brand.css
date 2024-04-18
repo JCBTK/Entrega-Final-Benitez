@@ -6,11 +6,9 @@ font-family: "Fjalla One", sans-serif;
 font-family: "Quicksand", sans-serif;
 */
 
-body{
-    margin: 0;
-    font-family:"Fjalla One",sans-serif;
-    font-size: 1rem;
-    font-weight: 400;
-    color: #383838;
-    background-color: #ffffff;
+.Brand{
+    font-weight: 300;
+    font-size: 2rem;
+    font-family: "Climate Crisis",sans-serif;
+    color: white;
 }
