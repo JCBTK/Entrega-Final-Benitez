@@ -6,6 +6,7 @@ function CategoryList() {
         <div>
             <nav>
                 <ul className="ListadoDeCategorias">
+                    <li><Link to="/">Home</Link></li>
                     <li><Link to="/camperas">Camperas</Link></li>
                     <li><Link to="/buzos">Buzos</Link></li>
                     <li><Link to="/remeras">Remeras</Link></li>

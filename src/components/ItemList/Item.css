@@ -53,6 +53,7 @@
     text-align: center;
     font-weight: bold;
     font-size: 20px;
+    margin :0;
 }
 
 .item--counter__container {

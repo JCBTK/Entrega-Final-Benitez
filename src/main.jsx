@@ -1,12 +1,13 @@
-import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom'; // Asegúrate de importar BrowserRouter
-import App from './App.jsx';
-import './index.css';
+import { StrictMode } from 'react';
+import { BrowserRouter as Router } from 'react-router-dom'; // Asegúrate de importar el enrutador si lo estás utilizando
+import App from './App';
 
 ReactDOM.render(
-<BrowserRouter>
-    <App />
-</BrowserRouter>,
-document.getElementById('root')
+    <StrictMode>
+        <Router>
+            <App />
+        </Router>
+    </StrictMode>,
+    document.getElementById('root')
 );

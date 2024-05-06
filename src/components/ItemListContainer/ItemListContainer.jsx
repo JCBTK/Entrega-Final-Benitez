@@ -1,15 +1,36 @@
+import React from "react";
 import ItemList from "../ItemList/ItemList";
-import useProducts from "../../hooks/useProducts";
-import useProduct from "../../hooks/useProduct";
+import { getProducts, getProductByCategory } from "../../mock/asyncMock";
 
-function ItemListContainer({ saludo }) {
-    const { isLoading: productsLoading, products } = useProducts();
-    const { product, isLoading: porduct4Loading } = useProduct(4);
-    if (productsLoading) return <h1>Cargando...</h1>;
-    
+function ItemListContainer({ selectedCategory }) {
+    const [products, setProducts] = React.useState([]);
+    const [loading, setLoading] = React.useState(true);
+
+    React.useEffect(() => {
+        setLoading(true);
+        const fetchData = async () => {
+            try {
+                let data;
+                if (selectedCategory && selectedCategory !== "Home") {
+                    data = await getProductByCategory(selectedCategory);
+                } else {
+                    data = await getProducts();
+                }
+                setProducts(data);
+                setLoading(false);
+            } catch (error) {
+                console.error("Error fetching products:", error);
+                setLoading(false);
+            }
+        };
+
+        fetchData();
+    }, [selectedCategory]);
+
+    if (loading) return <h1>Cargando...</h1>;
+
     return (
         <div>
-            <h1>{saludo}</h1>
             <ItemList products={products} />
         </div>
     );
