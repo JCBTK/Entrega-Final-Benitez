@@ -7,7 +7,6 @@ function NavBar (){
     return(
         <div className="Navbar">
             <div className="Navi">
-                <CategoryList/>
                 <CartWidget/>
             </div>
         </div>

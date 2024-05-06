@@ -14,3 +14,22 @@ body{
     color: #383838;
     background-color: #ffffff;
 }
+#root{
+    margin:0;
+}
+.Category--Container{
+    display: flex;
+    background-color: black;
+    width: 100%;
+    justify-content: center;
+}
+.Category--Container__Button{
+    background-color: black;
+    color: white;
+    border: none;
+    margin: 0 1rem;
+    font-family: "Quicksand", sans-serif;
+}
+.Category--Container__Button:hover{
+    color: rgb(174, 0, 255);
+}

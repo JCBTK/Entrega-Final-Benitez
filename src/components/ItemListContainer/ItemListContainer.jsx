@@ -30,9 +30,10 @@ function ItemListContainer({ selectedCategory }) {
     if (loading) return <h1>Cargando...</h1>;
 
     return (
-        <div>
+        <div className="Items--Complete">
             <ItemList products={products} />
         </div>
+        
     );
 }
 

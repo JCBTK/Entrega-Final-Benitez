@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 function Brand() {
     return (
         <div>
-            <Link to="/" className="Brand"><h1 className="Brand">TK Shop</h1></Link>
+            <Link to="/home" className="Brand"><h1 className="Brand">TK Shop</h1></Link>
         </div>
     );
 }
