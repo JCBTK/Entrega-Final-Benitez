@@ -25,6 +25,7 @@ font-family: "Quicksand", sans-serif;
     box-shadow: 0.5rem 0.5rem 0 black;
     transition: 0.2s;
     padding: 1rem;
+    border-radius: 0rem 1rem 0rem 1rem;
 }
 .item__container:hover{    
     box-shadow: 0.2rem 0.2rem 0 black;
@@ -41,7 +42,7 @@ font-family: "Quicksand", sans-serif;
 }
 
 .item--title {
-    color: rgb(127, 47, 206);
+    color: #ff0000;
     font-family: "Fjalla One", sans-serif;
     font-size: 1.5rem;
     font-weight: 400;
@@ -60,7 +61,7 @@ font-family: "Quicksand", sans-serif;
 }
 
 .item--price {
-    color: #5b953c;
+    color: #637659;
     text-align: center;
     font-weight: bold;
     font-size: 20px;

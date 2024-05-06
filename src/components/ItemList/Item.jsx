@@ -20,7 +20,7 @@ export default function Item({ item }) {
                 <ItemCount stock={item.stock} count={count} increment={increment} decrement={decrement}/>
             </div>
             <div className="item--cart__container">
-                <button className="item--cart__button" onClick={() => onAdd(item, count)}>Add to cart</button>
+                <button className="item--cart__button" onClick={() => onAdd(item, count)}>Agregar al carrito</button>
             </div>
         </div>
     );

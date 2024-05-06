@@ -14,10 +14,17 @@ function App() {
     setSelectedCategory(null);
   };
 
+  // Objeto que mapea cada categoría a un color de fondo
+  const categoryColors = {
+    "Remeras": "#e10186",
+    "Camperas": "#8fdbfe",
+    "Buzos": "#fcfa75",
+    "Pantalones": "#9064a9"
+  };
+
   return (
-    
     <Layout>
-      <div className="Category--Container">
+      <div className="Category--Container" style={{ backgroundColor: selectedCategory ? categoryColors[selectedCategory] : "#00da95" }}>
         <button className="Category--Container__Button" onClick={handleHomeClick}>Home</button>
         <button className="Category--Container__Button" onClick={() => handleCategoryChange("Remeras")}>Remeras</button>
         <button className="Category--Container__Button" onClick={() => handleCategoryChange("Camperas")}>Camperas</button>
