@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function CategoryList(){
-    return(
+function CategoryList() {
+    return (
         <div>
             <nav>
                 <ul className="ListadoDeCategorias">
@@ -14,7 +14,7 @@ function CategoryList(){
                 </ul>
             </nav>
         </div>
-    )
+    );
 }
 
 export default CategoryList;

@@ -1,6 +1,6 @@
 import { useState } from "react";
-import CartIcon from "./CartIcon"
-import "./css/Cart.css"
+import CartIcon from "../CartIcon/CartIcon"
+import "./CartWidget.css"
 
 function CartWidget(){
     const [cartItems, setCartItems ]= useState(4)

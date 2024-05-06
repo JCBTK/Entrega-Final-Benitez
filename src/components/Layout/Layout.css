@@ -1,0 +1,20 @@
+.layout--container {
+    width: 100%;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+}
+
+.header__wrapper {
+    background-color: #383838;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.main--container {
+    width: 80%;
+    flex: 1
+}

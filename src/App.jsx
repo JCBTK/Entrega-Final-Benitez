@@ -1,21 +1,13 @@
-import React from 'react';
-import './App.css';
-import ItemListContainer from './components/Main/ItemListContainer';
-import NavBar from './components/Navbar/NavBar';
-import ProductsCard from './components/Products/ProductsCard';
+import "./App.css";
+import Layout from "./components/Layout/Layout";
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 
 function App() {
   return (
-    <div>
-      <nav>
-        <NavBar/>
-      </nav>
-      <main>
-        <ItemListContainer Greeting="Hola Mundo!" />
-        <ProductsCard/>
-      </main>
-    </div>
-  )
+    <Layout>
+      <ItemListContainer saludo={"Bienvenido a TK Shop"} />
+    </Layout>
+  );
 }
 
 export default App;
