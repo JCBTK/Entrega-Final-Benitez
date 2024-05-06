@@ -5,9 +5,11 @@ import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
 function App() {
   return (
     <Layout>
-      <ItemListContainer saludo={"Bienvenido a TK Shop"} />
+      <ItemListContainer/>
     </Layout>
   );
 }
 
 export default App;
+
+

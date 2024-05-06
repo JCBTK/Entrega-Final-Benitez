@@ -1,6 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import Brand from "../Brand/Brand";
 import CartWidget from "../CartWidget/CartWidget";
 import CategoryList from "../CategoryList/CategoryList";
 import "./NavBar.css"
