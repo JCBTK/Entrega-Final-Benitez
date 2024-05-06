@@ -27,10 +27,10 @@ function ItemListContainer({ selectedCategory }) {
         fetchData();
     }, [selectedCategory]);
 
-    if (loading) return <h1>Cargando...</h1>;
+    if (loading) return <div className="cargando"><h1>Cargando...</h1></div>;
 
     return (
-        <div className="Items--Complete">
+        <div className="Items">
             <ItemList products={products} />
         </div>
         

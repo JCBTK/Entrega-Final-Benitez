@@ -4,17 +4,14 @@ import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
 import "./App.css"
 
 function App() {
+  
   const [selectedCategory, setSelectedCategory] = useState(null);
-
   const handleCategoryChange = (category) => {
     setSelectedCategory(category);
   };
-
   const handleHomeClick = () => {
     setSelectedCategory(null);
   };
-
-  // Objeto que mapea cada categoría a un color de fondo
   const categoryColors = {
     "Remeras": "#e10186",
     "Camperas": "#8fdbfe",

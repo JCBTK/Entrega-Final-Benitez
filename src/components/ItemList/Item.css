@@ -9,11 +9,12 @@ font-family: "Quicksand", sans-serif;
 .item--list__container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     gap: 1rem;
 }
 
 .item__container {
+    background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -25,7 +26,7 @@ font-family: "Quicksand", sans-serif;
     box-shadow: 0.5rem 0.5rem 0 black;
     transition: 0.2s;
     padding: 1rem;
-    border-radius: 0rem 1rem 0rem 1rem;
+    border-radius: 1rem 0.2rem 1rem 0.2rem;
 }
 .item__container:hover{    
     box-shadow: 0.2rem 0.2rem 0 black;
@@ -42,7 +43,7 @@ font-family: "Quicksand", sans-serif;
 }
 
 .item--title {
-    color: #ff0000;
+    color: #310666;
     font-family: "Fjalla One", sans-serif;
     font-size: 1.5rem;
     font-weight: 400;
@@ -92,6 +93,7 @@ font-family: "Quicksand", sans-serif;
     cursor: pointer;
     transition: 0.2s;
     border: 1px solid transparent;
+    border-radius: 1rem 0.2rem 1rem 0.2rem;
 }
 .item--cart__button:hover{
     border: 1px solid black;

@@ -1,7 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Fjalla+One&family=Quicksand:wght@300..700&display=swap');
 .footer{
-    color: black;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    color: white;
     font-family: "Climate Crisis",sans-serif;
     font-weight: 300;
     text-decoration: none;
+    text-shadow: 0.4rem 0.4rem 0rem black;
+    background-color: #383838;
+    transition: 0.3s;
+}
+.footer:hover{
+    text-shadow: 0.15rem 0.15rem 0rem rgb(0, 0, 0);
 }

@@ -10,3 +10,8 @@
 .item--count-button{
     padding:5px 10px;
 }
+.item--count--counter__container button{
+    border-radius: 1rem;
+    border: 1px solid transparent;
+    color:rgb(87, 86, 86)
+}

@@ -1,10 +1,12 @@
-import "./Brand.css"
+import "./Brand.css";
 import { Link } from 'react-router-dom';
 
 function Brand() {
     return (
         <div>
-            <Link to="/home" className="Brand"><h1 className="Brand">TK Shop</h1></Link>
+            <Link to="/recargada" className="Brand" target="_self">
+                <h1 className="Brand">TK Shop</h1>
+            </Link>
         </div>
     );
 }

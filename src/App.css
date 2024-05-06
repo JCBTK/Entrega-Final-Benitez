@@ -13,15 +13,16 @@ body{
     font-weight: 400;
     color: #383838;
     background-color: #ffffff;
+    background-image: url(https://t4.ftcdn.net/jpg/02/84/32/21/360_F_284322178_4gxGLWFFujUQpE7p31xMLDt916vayMgs.jpg);
 }
 #root{
     margin:0;
 }
 .Category--Container{
     display: flex;
-    background-color: black;
     width: 100%;
     justify-content: center;
+    margin-bottom: 1rem;
 }
 .Category--Container__Button{
     font-size: 1rem;
@@ -29,9 +30,17 @@ body{
     color: black;
     border: none;
     margin: 0.5rem 1rem;
+    font-weight: 700;
     font-family: "Quicksand", sans-serif;
-    transition: 0.2s;
 }
 .Category--Container__Button:hover{
     color: #ffffff;
+}
+.Items{
+    display: flex;
+    justify-content: center;
+}
+.cargando{
+    display: flex;
+    justify-content: center;
 }
