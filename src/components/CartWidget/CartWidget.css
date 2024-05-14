@@ -6,20 +6,27 @@ font-family: "Fjalla One", sans-serif;
 font-family: "Quicksand", sans-serif;
 */
 
-.cart--container>span {
+.cart--container{
     color: white;
     padding: 5px;
-    background-color: tomato;
     border-radius: 50%;
+    text-decoration: none;
 }
 
-.Carrito{
-    color:white;
+.Carrito--Widget {
+    text-decoration: none;
+    color: white;
+    font-family: "Quicksand", sans-serif;
 }
-.Carrito span{
+.Carrito--Widget::after{
+    text-decoration: none;
+}
+
+.Carrito--widget span{
     font-size: 1rem;
     font-family: "Quicksand",sans-serif;
     translate: -0.7rem 0rem;
+    text-decoration: none;
 }
 #CartLogo{
     width: 40px;
@@ -31,4 +38,11 @@ font-family: "Quicksand", sans-serif;
 #CartLogo:hover{
     cursor: pointer;
     translate: -5px 5px;
+}
+.cantidad{
+    color:white;
+    text-decoration: none;
+}
+.cantidad::after{
+    text-decoration: none;
 }

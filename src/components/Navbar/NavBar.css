@@ -3,11 +3,11 @@
     justify-content: space-between;
     align-items: center;
 }
-.hidden {
-    display: none;
-}
 .Navbar--Right{
     display: flex;
     align-items: center;
     margin: 0px 2rem 0rem 0rem;
+}
+.carrito{
+    text-decoration: none;
 }

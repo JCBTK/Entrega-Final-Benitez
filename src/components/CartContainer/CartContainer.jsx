@@ -19,7 +19,7 @@ export default function CartContainer() {
                 )}
             </div>
             <h3 className="text-xl font-semibold mt-3">Total: ${cartTotal}</h3>
-            <button className="mt-3 bg-red-400 text-white rounded-md px-2 py-1" onClick={clearCart}> Vaciar carro </button>
+            <button className="mt-3 bg-red-400 text-white rounded-md px-2 py-1 item--cart__button" onClick={clearCart}> Vaciar carro </button>
         </div>
     );
 }

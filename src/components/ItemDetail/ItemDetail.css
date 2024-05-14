@@ -29,7 +29,7 @@
 }
 
 .item--title {
-    color: tomato;
+    color: #444;
     min-height: 50px;
     max-height: 50px;
     overflow: auto;
@@ -64,7 +64,7 @@
 
 .item--cart__button {
     padding: 10px 15px;
-    background-color: tomato;
+    background-color: #444;
     border-radius: 5px;
     color: white;
     border: none;

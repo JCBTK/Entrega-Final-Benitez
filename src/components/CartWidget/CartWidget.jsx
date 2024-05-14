@@ -9,9 +9,9 @@ function CartWidget() {
     const calculateQuantity = cart.reduce((acc, item) => acc + item.quantity, 0);
     return (
         <Link to={"/cart"}>
-            <div className="Carrito">
+            <div className="Carrito--Widget">
             <CartIcon width={4} height={4} id="CarroLogo"/>
-                <span>
+                <span className="cantidad">
                     {calculateQuantity}
                 </span>
             </div>
