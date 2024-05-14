@@ -1,37 +1,32 @@
-import React, { useState } from "react";
+import "./App.css";
 import Layout from "./components/Layout/Layout";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
-import "./App.css"
+import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
+import CartProvider from "./contexts/CartContext/CartProvider";
+import CartContainer from "./components/CartContainer/CartContainer";
 
 function App() {
-  
-  const [selectedCategory, setSelectedCategory] = useState(null);
-  const handleCategoryChange = (category) => {
-    setSelectedCategory(category);
-  };
-  const handleHomeClick = () => {
-    setSelectedCategory(null);
-  };
-  const categoryColors = {
-    "Remeras": "#e10186",
-    "Camperas": "#8fdbfe",
-    "Buzos": "#fcfa75",
-    "Pantalones": "#9064a9"
-  };
-
   return (
-    <Layout>
-      <div className="Category--Container" style={{ backgroundColor: selectedCategory ? categoryColors[selectedCategory] : "#00da95" }}>
-        <button className="Category--Container__Button" onClick={handleHomeClick}>Home</button>
-        <button className="Category--Container__Button" onClick={() => handleCategoryChange("Remeras")}>Remeras</button>
-        <button className="Category--Container__Button" onClick={() => handleCategoryChange("Camperas")}>Camperas</button>
-        <button className="Category--Container__Button" onClick={() => handleCategoryChange("Buzos")}>Buzos</button>
-        <button className="Category--Container__Button" onClick={() => handleCategoryChange("Pantalones")}>Pantalones</button>
-      </div>
-      <div>
-        <ItemListContainer selectedCategory={selectedCategory} /> 
-      </div>
-    </Layout>
+    <BrowserRouter>
+      <CartProvider>
+        <Layout>
+          <Routes>
+            <Route path="/" element={<ItemListContainer />} />
+            <Route
+              path="/category/:categoryName"
+              element={<ItemListContainer />}
+            />
+            <Route
+              path="/product/:productId"
+              element={<ItemDetailContainer />}
+            />
+            <Route path="/cart" element={<CartContainer />} />
+            <Route path="/checkout" element={<h1>Proximamente...</h1>} />
+          </Routes>
+        </Layout>
+      </CartProvider>
+    </BrowserRouter>
   );
 }
 

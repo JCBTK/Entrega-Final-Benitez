@@ -1,8 +1,8 @@
 import CartLogo from "./img/Cart.png"
 
-function CartIcon({width,height}) {
+function CartIcon() {
     return (
-        <a><img src={CartLogo} alt="cartlogo" id="CartLogo" width={width} height={height}
+        <a><img src={CartLogo} alt="cartlogo" id="CartLogo"
         /></a>
     );
 }

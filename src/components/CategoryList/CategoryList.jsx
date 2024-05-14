@@ -1,20 +1,30 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import "./CategoryList.css";
+import { NavLink } from "react-router-dom";
+
+const CATEGORIAS_ROPA = [
+
+    {path: "/",label: "Inicio",}
+    ,
+    {path: "/category/Camperas",label: "Camperas",}
+    ,
+    {path: "/category/Buzos",label: "Buzos",}
+    ,
+    {path: "/category/Remeras",label: "Remeras",}
+    ,
+    {path: "/category/Pantalones",label: "Pantalones",},
+];
 
 function CategoryList() {
     return (
-        <div>
-            <nav>
-                <ul className="ListadoDeCategorias">
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/camperas">Camperas</Link></li>
-                    <li><Link to="/buzos">Buzos</Link></li>
-                    <li><Link to="/remeras">Remeras</Link></li>
-                    <li><Link to="/pantalones">Pantalones</Link></li>
-                </ul>
-            </nav>
-        </div>
-    );
-}
-
+        <nav>
+            <ul className="category--list">
+                {CATEGORIAS_ROPA.map((ruta) => (
+                    <li key={ruta.path}>
+                        <NavLink className={({ isActive }) => (isActive ? "active-link" : "")} to={ruta.path}>
+                            {ruta.label}
+                        </NavLink>
+                    </li>
+                ))}
+            </ul>
+        </nav>);}
 export default CategoryList;

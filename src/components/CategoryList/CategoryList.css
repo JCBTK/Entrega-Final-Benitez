@@ -1,0 +1,32 @@
+.category--list{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 15px;
+    padding-right: 20px;
+}
+
+.category--list li{
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0.4rem 0.4rem 0 black;
+    transition:box-shadow 0.5s, background-color 0.2s;
+
+}
+
+.category--list li:hover{
+    background-color: #ffffff46;
+    box-shadow: 0.2rem 0.2rem 0 black;
+    & a{
+        color: white;
+    }
+}
+
+.category--list li a{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    transition: 0.2s;
+}

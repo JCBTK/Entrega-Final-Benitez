@@ -1,17 +1,15 @@
-.item--count__container{
-    display:flex;
+
+.item--count__container {
+    display: flex;
     flex-direction: column;
     gap: 10px;
 }
-.item--count--counter__container{
-    display:flex;
+
+.item--count--counter__container {
+    display: flex;
     gap: 10px;
 }
-.item--count-button{
-    padding:5px 10px;
-}
-.item--count--counter__container button{
-    border-radius: 1rem;
-    border: 1px solid transparent;
-    color:rgb(87, 86, 86)
+
+.item--count-button {
+    padding: 5px 10px;
 }

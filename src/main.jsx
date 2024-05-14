@@ -1,13 +1,9 @@
-import ReactDOM from 'react-dom';
-import { StrictMode } from 'react';
-import { BrowserRouter as Router } from 'react-router-dom'; // Asegúrate de importar el enrutador si lo estás utilizando
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App.jsx";
 
-ReactDOM.render(
-    <StrictMode>
-        <Router>
-            <App />
-        </Router>
-    </StrictMode>,
-    document.getElementById('root')
+ReactDOM.createRoot(document.getElementById("root")).render(
+    <React.StrictMode>
+        <App />
+    </React.StrictMode>
 );

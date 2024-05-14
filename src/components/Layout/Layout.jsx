@@ -5,13 +5,13 @@ import "./Layout.css";
 
 export default function Layout({ children }) {
     return (
-        <div className="layout--container">
-            <div className="header__wrapper">
-                <Brand />
-                <NavBar />
-            </div>
-            <main className="main--container">{children}</main>
-            <Footer />
+        <><><div className="header__wrapper py-2 ">
+            <Brand />
+            <NavBar />
         </div>
+            <div className="layout--container">
+                <main className="main--container">{children}</main>
+            </div></>
+            <Footer /></>
     );
 }

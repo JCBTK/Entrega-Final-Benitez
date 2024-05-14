@@ -1,14 +1,17 @@
 import { useEffect, useState } from "react";
-import { getProducts } from "../mock/asyncMock";
+import { getProducts, getProductsByCategory } from "../mock/asyncMock";
 
-export default function useProducts() {
+export default function useProducts(categoryName) {
     const [products, setProducts] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     useEffect(() => {
-        getProducts()
-            .then((data) => setProducts(data))
-            .finally(() => setIsLoading(false));
-    }, []);
-
-    return { products, isLoading };
-}
+        setIsLoading(true);
+        if (categoryName) {
+            getProductsByCategory(categoryName)
+                .then((data) => setProducts(data))
+                .finally(() => setIsLoading(false));
+        } else {
+            getProducts()
+                .then((data) => setProducts(data))
+                .finally(() => setIsLoading(false)); }}, [categoryName]);
+    return { products, isLoading };}

@@ -1,17 +1,22 @@
-import { useState } from "react";
-import CartIcon from "../CartIcon/CartIcon"
-import "./CartWidget.css"
+import "./CartWidget.css";
+import CartIcon from "../CartIcon/CartIcon";
+import { Link } from "react-router-dom";
+import { useContext } from "react";
+import CartContext from "../../contexts/CartContext/CartContext";
 
-function CartWidget(){
-    const [cartItems, setCartItems ]= useState(4)
-
-    return(
-        <>
-        <div className="Carrito">
-            <CartIcon width={50} height={50} id="CarroLogo"/>
-            <span>{cartItems}</span>
-        </div>
-        </>
-    )
+function CartWidget() {
+    const { cart } = useContext(CartContext);
+    const calculateQuantity = cart.reduce((acc, item) => acc + item.quantity, 0);
+    return (
+        <Link to={"/cart"}>
+            <div className="Carrito">
+            <CartIcon width={4} height={4} id="CarroLogo"/>
+                <span>
+                    {calculateQuantity}
+                </span>
+            </div>
+        </Link>
+    );
 }
+
 export default CartWidget;

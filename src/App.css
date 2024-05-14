@@ -6,25 +6,28 @@ font-family: "Fjalla One", sans-serif;
 font-family: "Quicksand", sans-serif;
 */
 
-body{
+body {
     margin: 0;
-    font-family:"Fjalla One",sans-serif;
+    font-family: "Fjalla One", sans-serif;
     font-size: 1rem;
     font-weight: 400;
     color: #383838;
     background-color: #ffffff;
     background-image: url(https://t4.ftcdn.net/jpg/02/84/32/21/360_F_284322178_4gxGLWFFujUQpE7p31xMLDt916vayMgs.jpg);
 }
-#root{
-    margin:0;
+
+#root {
+    margin: 0;
 }
-.Category--Container{
+
+.Category--Container {
     display: flex;
     width: 100%;
     justify-content: center;
     margin-bottom: 1rem;
 }
-.Category--Container__Button{
+
+.Category--Container__Button {
     font-size: 1rem;
     background-color: transparent;
     color: black;
@@ -33,14 +36,57 @@ body{
     font-weight: 700;
     font-family: "Quicksand", sans-serif;
 }
-.Category--Container__Button:hover{
+
+.Category--Container__Button:hover {
     color: #ffffff;
 }
-.Items{
+
+.Items {
     display: flex;
     justify-content: center;
 }
-.cargando{
+
+.cargando {
     display: flex;
     justify-content: center;
+}
+
+
+.logo {
+    height: 6em;
+    padding: 1.5em;
+    will-change: filter;
+    transition: filter 300ms;
+}
+
+.logo:hover {
+    filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+    filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    a:nth-of-type(2) .logo {
+        animation: logo-spin infinite 20s linear;
+    }
+}
+
+.card {
+    padding: 2em;
+}
+
+.read-the-docs {
+    color: #888;
 }
