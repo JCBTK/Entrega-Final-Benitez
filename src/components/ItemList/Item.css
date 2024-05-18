@@ -20,14 +20,13 @@ font-family: "Quicksand", sans-serif;
     flex-direction: column;
     align-items: center;
     border: 2px solid #444;
-    border-radius: 5px;
     padding: 10px;
     margin: 1rem;
     width: 250px;
     box-shadow: 0.5rem 0.5rem 0 black;
     transition: 0.2s;
     padding: 1rem;
-    border-radius: 1rem 0.2rem 1rem 0.2rem;
+    border-radius: 0.5rem;
     & a{
         color: #637659;
         text-decoration: none;

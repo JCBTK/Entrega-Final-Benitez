@@ -10,10 +10,8 @@ function CartWidget() {
     return (
         <Link to={"/cart"}>
             <div className="Carrito--Widget">
-            <CartIcon width={4} height={4} id="CarroLogo"/>
-                <span className="cantidad">
-                    {calculateQuantity}
-                </span>
+                <CartIcon width={4} height={4} id="CarroLogo"/>
+                <span>{calculateQuantity}</span>
             </div>
         </Link>
     );

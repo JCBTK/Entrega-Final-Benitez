@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import CartContext from "../../contexts/CartContext/CartContext";
-import "./CartItem.css"
+import "..ItemList/Item.css"
 
 
 export default function CartItem({ item }) {
