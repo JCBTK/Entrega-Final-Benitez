@@ -1,56 +1,72 @@
-.item_detail_container {
-    width: 100%;
-    min-height: 80vh;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-}
-
-.item_detail_img {
-    position: absolute;
-    height: 400px;
-    transition: filter 0.2s, height 0.2s;
-    filter: drop-shadow(0rem 0.5rem 1.5rem black);
-    margin:0;
-}
-
-.item_detail_img:hover {
-    margin: 0;
-    position:absolute;
-    height: 500px;
-    filter: drop-shadow(0rem 1rem 1rem rgba(112, 112, 112, 0.478));
-}
-
-.Btnes {
-    translate: 100px 100px;;
-    grid-area: 2 / 5 / 4 / 6;
-}
-
-.item_detail_img-container {
-    grid-area: 1 / 1 / 6 / 7;
+.item--list__container {
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.item--cart__button:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+}
+
+.item__container {
+    border: 1px solid #444;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    width: 250px;
+}
+
+.item--img__container {
+    display: flex;
     justify-content: center;
 }
 
-.item_detail_desciprion--box {
-    grid-area: 3 / 1 / 6 / 3;
-    padding-left: 4rem;
+.item--img {
+    max-width: 100%;
+    height: 200px;
 }
-.item_detail_cart-button{
-    height: 3rem;
-    margin-top: 1rem;
-    font-size: 1rem;
+
+.item--title {
+    color: #444;
+    min-height: 50px;
+    max-height: 50px;
+    overflow: auto;
+}
+
+.item--description {
+    color: gray;
+    font-size: 14px;
+    max-height: 100px;
+    overflow: auto;
+}
+
+.item--price {
+    color: #5b953c;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.item--counter__container {
     display: flex;
-    align-items: center;
     justify-content: center;
-    background-color: white;
-    border: 1px solid black ;
-    border-radius: 1.5rem;
-    padding: 0rem 2rem;
+    gap: 10px;
+    margin-top: 15px;
 }
-.fi-rr-shopping-cart-add{
-    font-size: 1.5rem;
+
+.item--cart__container {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.item--cart__button {
+    padding: 10px 15px;
+    background-color: #444;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    cursor: pointer;
 }

@@ -1,25 +1,16 @@
-import { useState, useEffect } from "react";
-import { getFirestore, doc, getDoc } from "firebase/firestore";
+import { useEffect, useState } from "react";
+import { getProductById } from "../mock/asyncMock";
 
-const useProductById = (productId) => {
-  const [product, setProduct] = useState(null);
-  const [loading, setLoading] = useState(true);
-  
-  useEffect(() => {
-    const fetchProduct = async () => {
-      const db = getFirestore();
-      const productRef = doc(db, "products", productId);
-      const productSnap = await getDoc(productRef);
-      if (productSnap.exists()) {
-        setProduct(productSnap.data());
-      } else {
-        setProduct(null);
-      }
-      setLoading(false);
+export default function useProductById(productId) {
+    const [product, setProduct] = useState(null);
+    const [loading, setLoading] = useState(true);
+    console.log({ product });
+    useEffect(() => {
+        getProductById(productId)
+            .then((product) => {setProduct(product);})
+            .finally(() => {setLoading(false);});}, [productId]);
+    return {
+        product,
+        loading,
     };
-    fetchProduct();
-  }, [productId]);
-  return { product, loading };
-};
-
-export default useProductById;
+}

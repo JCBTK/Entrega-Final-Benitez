@@ -10,9 +10,8 @@ font-family: "Quicksand", sans-serif;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    padding: 2rem;
-    min-height: 68vh;
-    align-content: center;
+    gap: 1rem;
+    margin: 1.5rem 0rem 1.5rem 0rem; 
 }
 
 .item__container {
@@ -26,6 +25,7 @@ font-family: "Quicksand", sans-serif;
     width: 250px;
     box-shadow: 0.5rem 0.5rem 0 black;
     transition: 0.2s;
+    padding: 1rem;
     border-radius: 0.5rem;
     & a{
         color: #637659;

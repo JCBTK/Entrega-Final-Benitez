@@ -1,20 +1,19 @@
-body{
+
+
+.layout--container {
+    width: 80%;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
 }
 
-.layout--container {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
 .header__wrapper {
-    background-color: #383838;
+    background-color: #303030;
     display: flex;
     justify-content: space-around;
 }
-.main--container{
-    width: 100%;
+
+.main--container {
+    flex: 1
 }
