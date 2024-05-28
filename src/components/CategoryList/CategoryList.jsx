@@ -2,16 +2,11 @@ import "./CategoryList.css";
 import { NavLink } from "react-router-dom";
 
 const CATEGORIAS_ROPA = [
-
-    {path: "/",label: "Inicio",}
-    ,
-    {path: "/category/Camperas",label: "Camperas",}
-    ,
-    {path: "/category/Buzos",label: "Buzos",}
-    ,
-    {path: "/category/Remeras",label: "Remeras",}
-    ,
-    {path: "/category/Pantalones",label: "Pantalones",},
+    { path: "/", label: "Inicio" },
+    { path: "/category/Camperas", label: "Camperas" },
+    { path: "/category/Buzos", label: "Buzos" },
+    { path: "/category/Remeras", label: "Remeras" },
+    { path: "/category/Pantalones", label: "Pantalones" },
 ];
 
 function CategoryList() {
@@ -26,5 +21,8 @@ function CategoryList() {
                     </li>
                 ))}
             </ul>
-        </nav>);}
+        </nav>
+    );
+}
+
 export default CategoryList;

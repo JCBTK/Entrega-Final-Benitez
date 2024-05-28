@@ -1,31 +1,40 @@
-import { useContext } from "react";
+import React from "react";
 import useCount from "../../hooks/useCount";
 import ItemCount from "../ItemCount/ItemCount";
 import "./ItemDetail.css";
-import CartContext from "../../contexts/CartContext/CartContext";
 
-export default function ItemDetail({ item }) {
-    const { count, increment, decrement, reset } = useCount(0);
-    const { addToCart } = useContext(CartContext);
-    const handleAddToCart = () => {
-        addToCart(item, count);
-        reset();
-    };
-    return (
-        <div className="item__container">
-            <div className="item--img__container">
-                <img className="item--img" src={item.image} alt={item.title} />
-            </div>
-            <h2 className="item--title">{item.title}</h2>
-            <p className="item--description">{item.description}</p>
-            <p className="item--price">${item.price}</p>
-            <div className="item--counter__container">
-                <ItemCount stock={item.stock} count={count} increment={increment} decrement={decrement}/>
-            </div>
-            <div className="item--cart__container">
-                <button className="item--cart__button" onClick={handleAddToCart} disabled={count === 0}> Añadir al carro</button>
-            </div>
-            <p> Existen <strong>{item.stock - count}</strong> unidades disponibles</p>
+export default function ItemDetail({ item, onAddToCart }) {
+  const { count, increment, decrement, reset } = useCount(0);
+
+  const handleAddToCart = () => {
+    onAddToCart(item, count);
+    reset();
+  };
+
+  return (
+    <div className="item_detail_container">
+      <div className="item_detail_img-container">
+        <img className="item_detail_img" src={item.image} alt={item.title} />
+      </div>
+      <div className="item_detail_desciprion--box">
+        <h2 className="item_detail_title">{item.title}</h2>
+        <p className="item_detail_description">{item.description}</p>
+        <p className="item_detail_price">${item.price}</p>
+        <p> Existen <strong>{item.stock - count}</strong> unidades disponibles</p>
+      </div>
+      {item.stock > 0 ? (
+        <div className="Btnes">
+          <div className="item_detail_counter--container">
+            <ItemCount stock={item.stock} count={count} increment={increment} decrement={decrement}/>
+          </div>
+          <div className="item_detail_cart-container">
+            <button className="item_detail_cart-button" onClick={handleAddToCart} disabled={count === 0}><i class="fi fi-rr-shopping-cart-add"></i> agregar al carrito</button>
+          </div>
+          
         </div>
-    );
+      ) : (
+        <p className="no-stock">No hay stock de este producto</p>
+      )}
+    </div>
+  );
 }

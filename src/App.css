@@ -12,8 +12,8 @@ body {
     font-size: 1rem;
     font-weight: 400;
     color: #383838;
-    background-color: #ffffff;
-    background-image: url(https://t4.ftcdn.net/jpg/02/84/32/21/360_F_284322178_4gxGLWFFujUQpE7p31xMLDt916vayMgs.jpg);
+    background: #F40667;
+    background: radial-gradient(at left top, #F40667, #F4C73B);
 }
 
 #root {
