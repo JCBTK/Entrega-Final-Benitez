@@ -3,7 +3,7 @@ import CartContext from "../../contexts/CartContext/CartContext";
 import "../ItemList/Item.css";
 
 export default function CartItem({ item }) {
-    const { removeFromCart, addToCart } = useContext(CartContext);
+    const { removeFromCart, } = useContext(CartContext);
     return (
         <div key={item.product.id} className="flex items-center justify-between item__container">
             <div className="flex gap-5 items-center">
@@ -17,11 +17,8 @@ export default function CartItem({ item }) {
                 </div>
             </div>
             <div className="flex gap-3">
-                <button className="px-1 rounded-full bg-slate-300" onClick={() => removeFromCart(item.product.id,)}>
-                    -
-                </button>
-                <button className="px-1 rounded-full bg-slate-300" onClick={() => addToCart(item.product, 1)}>
-                    +
+                <button className="px-1 rounded-full bg-slate-300" onClick={() => removeFromCart(item.product.id)}>
+                    Eliminar del Carrito
                 </button>
             </div>
         </div>

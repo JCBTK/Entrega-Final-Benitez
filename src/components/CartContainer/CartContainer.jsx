@@ -17,7 +17,7 @@ export default function CartContainer() {
                         <Link className={`${styles.button} mt-3`} to="/">Volver al inicio</Link>
                     </>
                 ) : (
-                    cart.map((item) => <CartItem key={item.product.id} item={item} />)
+                    cart.map((item, index) => <CartItem key={index} item={item} />)
                 )}
             </div>
             {cart.length > 0 && (
