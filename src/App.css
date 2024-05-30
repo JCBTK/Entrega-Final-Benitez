@@ -12,11 +12,15 @@ body {
     font-size: 1rem;
     font-weight: 400;
     color: #383838;
-    background-color: #ffffff;
-    background-image: url(https://t4.ftcdn.net/jpg/02/84/32/21/360_F_284322178_4gxGLWFFujUQpE7p31xMLDt916vayMgs.jpg);
+    background: radial-gradient( #FFC801, #FF3501);
+
 }
 
 #root {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
     margin: 0;
 }
 

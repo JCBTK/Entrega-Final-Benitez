@@ -1,17 +1,15 @@
-import { useContext } from "react";
+import React from "react";
 import useCount from "../../hooks/useCount";
 import ItemCount from "../ItemCount/ItemCount";
 import "./ItemDetail.css";
-import CartContext from "../../contexts/CartContext/CartContext";
+
 
 export default function ItemDetail({ item, onAddToCart }) {
   const { count, increment, decrement, reset } = useCount(0);
-
   const handleAddToCart = () => {
     onAddToCart(item, count);
     reset();
   };
-
   return (
     <div className="item_detail_container">
       <div className="item_detail_img-container">
@@ -29,7 +27,7 @@ export default function ItemDetail({ item, onAddToCart }) {
             <ItemCount stock={item.stock} count={count} increment={increment} decrement={decrement}/>
           </div>
           <div className="item_detail_cart-container">
-            <button className="item_detail_cart-button" onClick={handleAddToCart} disabled={count === 0}><i class="fi fi-rr-shopping-cart-add"></i> agregar al carrito</button>
+            <button className="item_detail_cart-button" onClick={handleAddToCart} disabled={count === 0}><i className="fi fi-rr-shopping-cart-add"></i> Agregar al carro</button>
           </div>
           
         </div>

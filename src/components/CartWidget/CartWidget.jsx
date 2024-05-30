@@ -1,5 +1,5 @@
 import "./CartWidget.css";
-import CartIcon from "../CartIcon/CartIcon";
+
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import CartContext from "../../contexts/CartContext/CartContext";
@@ -10,8 +10,8 @@ function CartWidget() {
     return (
         <Link to={"/cart"}>
             <div className="Carrito--Widget">
-                <CartIcon width={4} height={4} id="CarroLogo"/>
-                <span>{calculateQuantity}</span>
+                <i className="fi fi-rr-shopping-cart"></i>
+                <span >{calculateQuantity}</span>
             </div>
         </Link>
     );

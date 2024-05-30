@@ -19,7 +19,7 @@ font-family: "Quicksand", sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 2px solid #444;
+    border: 1px solid transparent;
     padding: 10px;
     margin: 1rem;
     width: 250px;
@@ -47,10 +47,15 @@ font-family: "Quicksand", sans-serif;
 .item--img {
     max-width: 100%;
     height: 200px;
+    filter: drop-shadow(0rem 0rem 2rem rgba(0, 0, 0, 0.7));
+    transition: drop-shadow 0.1s;
+}
+.item--img:hover{
+    filter:drop-shadow(0rem 0rem 2rem rgb(119, 63, 4, 0.7)) ;
 }
 
 .item--title {
-    color: white;
+    color: #383838;
     font-family: "Fjalla One", sans-serif;
     font-size: 1.5rem;
     font-weight: 400;
@@ -87,23 +92,26 @@ font-family: "Quicksand", sans-serif;
 .item--cart__container {
     display: flex;
     justify-content: center;
-    margin-top: 15px;
 }
 
-.item--cart__button {
-    font-family: "Quicksand", sans-serif;
-    padding: 10px 15px;
+.Cart_Item-Button {
+    padding: 0.5rem 0.8rem;
     background-color: #383838;
-    border-radius: 5px;
     color: white;
-    border: none;
+    border: 1px solid transparent;
     cursor: pointer;
     transition: 0.2s;
     border: 1px solid transparent;
-    border-radius: 1rem 0.2rem 1rem 0.2rem;
+    border-radius: 1rem;
+    margin: 0rem 1rem;
 }
-.item--cart__button:hover{
+.Cart_Item-Button:hover{
     border: 1px solid black;
     background-color: #555;
     box-shadow: inset 0.2rem 0.2rem  0 black;
+}
+.Quantity{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

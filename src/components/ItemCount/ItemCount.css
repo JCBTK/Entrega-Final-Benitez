@@ -1,15 +1,40 @@
-
-.item--count__container {
+.Item_Count {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
+    background-color: #383838;
+    justify-content: center;
+    align-items:center;
+    height: 3rem;
+    width: 11rem;
+    border-radius: 1.5rem;
 }
-
-.item--count--counter__container {
+button:disabled{
+    display: none;
+    color: transparent;
+    background-color: transparent;
+}
+.Item_Count-Button {
+    translate: 1rem 0rem;
     display: flex;
-    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 2rem ;
+    font-size: 2rem;
+    height: 2rem;
+    background-color: white;
+    border:1px solid transparent;
+    border-radius: 1rem;
+    translate: 0rem 0rem;
 }
-
-.item--count-button {
-    padding: 5px 10px;
+.Item_Count-Button:hover{
+    cursor: pointer;
 }
+.Contador{
+    border-radius: 1rem;
+    border: 2px solid #505050;
+    padding: 0.3rem 2rem ;
+    margin: 0rem 0.5rem;
+    background-color: #ffffff;
+    color: #383838;
+}
+.fi-rr-add, .fi-rr-minus-circle{
+    font-size: 1.5rem;}
