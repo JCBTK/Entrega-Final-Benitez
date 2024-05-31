@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import "./ItemCount.css";
 
 export default function ItemCount({ stock, count, increment, decrement }) {

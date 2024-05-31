@@ -2,7 +2,6 @@ import "./CategoryList.css";
 import { NavLink } from "react-router-dom";
 
 const CATEGORIAS_ROPA = [
-
     {path: "/",label: "Inicio",}
     ,
     {path: "/category/Camperas",label: "Camperas",}

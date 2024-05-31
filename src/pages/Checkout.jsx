@@ -46,7 +46,7 @@ export default function Checkout() {
             if (result.isConfirmed) {
                 try {
                     const db = getFirestore();
-                    // Crear un nuevo documento en la colección 'ventas'
+                    
                     const venta = {
                         name,
                         surname,
@@ -58,9 +58,7 @@ export default function Checkout() {
                     };
                     await addDoc(collection(db, 'ventas'), venta);
                     
-                    // Actualizar el stock de los productos
                     for (const item of cart) {
-                        // Convertir el ID del producto a cadena
                         const productId = item.product.id.toString();
                         const productRef = doc(db, 'products', productId);
                         const newStock = item.product.stock - item.quantity;

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import ItemList from '../components/ItemList/ItemList';
 import { useProducts } from '../hooks/useProducts';
@@ -8,7 +7,6 @@ function HomePage() {
     if (isLoading) {
         return <div>Cargando...</div>;
     }
-
     return (
         <div>
             <h1>Inicio</h1>

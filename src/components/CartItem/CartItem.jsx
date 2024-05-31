@@ -3,7 +3,6 @@ import { useContext } from "react";
 import CartContext from "../../contexts/CartContext/CartContext";
 import "../ItemList/Item.css";
 
-
 export default function CartItem({ item }) {
     const { removeFromCart,} = useContext(CartContext);
     

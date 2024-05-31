@@ -9,7 +9,6 @@ function ItemListContainer() {
     if (loading) return
         <h1>Cargando {categoryName ? categoryName : "todos los productos"} ...</h1>;
     return (
-
             <ItemList products={products} />
     );
 }

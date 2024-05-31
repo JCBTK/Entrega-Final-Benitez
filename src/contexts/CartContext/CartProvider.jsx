@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
 import CartContext from "./CartContext";
 
@@ -5,15 +6,12 @@ export default function CartProvider({ children }) {
     const [cart, setCart] = useState(
         localStorage.getItem("cart") ? JSON.parse(localStorage.getItem("cart")) : []
     );
-
     const addToCart = (product, quantity) => {
         setCart([...cart, { product, quantity }]);
     };
-
     useEffect(() => {
         localStorage.setItem("cart", JSON.stringify(cart));
     }, [cart]);
-
     const addQuantitytoCart = (productId, quantity) => {
         const itemInCart = cart.find((item) => item.product.id === productId);
         if (itemInCart) {
@@ -26,7 +24,6 @@ export default function CartProvider({ children }) {
             setCart(updatedCart);
         }
     };
-
     const removeFromCart = (productId, quantity) => {
         const itemInCart = cart.find((item) => item.product.id === productId);
         if (itemInCart) {
@@ -40,11 +37,9 @@ export default function CartProvider({ children }) {
             setCart(filteredCart);
         }
     };
-
     const clearCart = () => {
         setCart([]);
     };
-
     const cartTotal = cart
         .reduce((acc, item) => {
             return acc + item.product.price * item.quantity;

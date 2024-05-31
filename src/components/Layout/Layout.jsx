@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import Brand from "../Brand/Brand";
 import Footer from "../Footer/Footer";
 import NavBar from "../Navbar/NavBar";
