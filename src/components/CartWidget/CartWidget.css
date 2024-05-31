@@ -60,3 +60,39 @@ font-family: "Quicksand", sans-serif;
     translate: 0px -2px;
     
 }
+@media screen and (max-width: 768px){
+
+    .Carrito--Widget{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 2.5rem;
+        width: 2.5rem;
+        background-color: transparent;
+        border-radius: 0.5rem;
+        border: 1px solid transparent;
+        overflow: hidden;
+        box-shadow: none;
+    }
+    .Carrito--Widget i{
+        font-size: 1.5rem;
+        translate: 0.5rem 0rem;
+        color: rgb(255, 255, 255);
+        transition: 0.2s;
+    }
+    .Carrito--Widget i:hover{
+        color:orange;
+    }
+    .Carrito--Widget span{
+        margin: 0;
+        font-size: 0.7rem;
+        font-weight: 700;
+        color: rgb(0, 0, 0);
+        font-family: "Quicksand", sans-serif;
+        translate: -5px 10px;
+        background-color: rgb(255, 162, 0);
+        padding: 0rem 0.3rem;
+        border-radius: 0.5rem;
+        border: 1px solid transparent;
+    }
+}

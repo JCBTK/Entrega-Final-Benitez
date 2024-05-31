@@ -6,6 +6,7 @@
 .Navbar--Right{
     display: flex;
     align-items: center;
+    
 }
 .carrito{
     text-decoration: none;

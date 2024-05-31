@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import "./App.css";
 import Layout from "./components/Layout/Layout";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
