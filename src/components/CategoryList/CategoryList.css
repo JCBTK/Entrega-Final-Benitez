@@ -1,32 +1,3 @@
-.category--list{
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    gap: 15px;
-    padding-right: 20px;
-}
-.category--list li{
-    background-color: white;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    box-shadow: 0.4rem 0.4rem 0 black;
-    transition:box-shadow 0.5s, background-color 0.2s;
-}
-.category--list li:hover{
-    background-color: #ffffff46;
-    box-shadow: 0.2rem 0.2rem 0 black;
-    & a{
-        color: white;
-    }
-}
-.category--list li a{
-    text-decoration: none;
-    color: black;
-    font-weight: 500;
-    transition: 0.2s;
-}
-
 .abrir-menu,
 .cerrar-menu {
     display: none;
@@ -51,7 +22,7 @@
     .abrir-menu:hover,.cerrar-menu:hover{
         color: orange;
     }
-    .nav {
+    nav {
         opacity: 0;
         visibility: hidden;
         display: flex;
@@ -103,4 +74,55 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 2rem;
+}
+.Navbar{
+    display: flex;
+    color: #ffffff;
+    list-style: none;
+    gap: 1rem;
+}
+.li1{
+    border-radius: 0.5rem;
+    border: 1px solid black;
+    box-shadow: 0.3rem 0.3rem 0 black;
+}
+.ul2{
+    border-bottom: 0.5rem;
+}
+.li2{
+    box-shadow: 0.3rem 0.3rem 0 black;
+}
+nav ul li, nav ul li a {
+    height: 1.5rem;
+    width: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: #ffffff;
+    color: #383838;
+    text-decoration: none;
+}
+nav ul ul {
+	display: none;
+	position: absolute;
+}
+nav ul li:hover > ul {
+	display:flex;
+    flex-direction: column;
+    list-style: none;
+    translate: -2.25rem 5.75rem;
+    width: 6rem;
+}
+nav ul li:hover{
+    background-color: #ffffff;
+    color: black;
+}
+.Navbar NavLink {
+	display:block;
+	padding:0 10px;	
+	color:#FFF;
+	font-size:20px;
+	line-height: 60px;
+	text-decoration:none;
 }

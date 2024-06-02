@@ -1,15 +1,8 @@
+/* eslint-disable no-unused-vars */
 import React, { useEffect } from "react";
 import "./CategoryList.css";
 import { NavLink } from "react-router-dom";
 import CartWidget from "../CartWidget/CartWidget";
-
-const CATEGORIAS_ROPA = [
-    { path: "/", label: "Inicio" },
-    { path: "/category/Camperas", label: "Camperas" },
-    { path: "/category/Buzos", label: "Buzos" },
-    { path: "/category/Remeras", label: "Remeras" },
-    { path: "/category/Pantalones", label: "Pantalones" },
-];
 
 function CategoryList() {
     useEffect(() => {
@@ -49,16 +42,19 @@ function CategoryList() {
             <button id="abrir" className="abrir-menu"><i className="bi bi-list"></i></button>
             <nav className="nav" id="nav">
                 <button className="cerrar-menu" id="cerrar"><i className="bi bi-x"></i></button>
-                <ul className="category--list nav-list">
-                    {CATEGORIAS_ROPA.map((ruta) => (
-                        <li key={ruta.path}>
-                            <NavLink className={({ isActive }) => (isActive ? "active-link" : "")} to={ruta.path}>
-                                {ruta.label}
-                            </NavLink>
-                        </li>
-                    ))}
+                <ul className="Navbar ul1">
+                    <li className="li1"><NavLink to="/">Inicio</NavLink></li>
+                    <li className="li1">Categorias
+                        <ul className="ul2">
+                            <li className="li2"><NavLink to="/category/Camperas">Camperas</NavLink></li>
+                            <li className="li2"><NavLink to="/category/Buzos">Buzos</NavLink></li>
+                            <li className="li2"><NavLink to="/category/Remeras">Remeras</NavLink></li>
+                            <li className="li2"><NavLink to="/category/Pantalones">Pantalones</NavLink></li>
+                        </ul>
+                    </li>
                     <CartWidget className="carrito" />
                 </ul>
+                
             </nav>
         </header>
     );
