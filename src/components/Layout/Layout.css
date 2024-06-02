@@ -12,6 +12,7 @@
     display: flex;
     justify-content: space-around;
     padding: 0rem 2rem;
+    height: 6rem;
 }
 
 .main--container{
