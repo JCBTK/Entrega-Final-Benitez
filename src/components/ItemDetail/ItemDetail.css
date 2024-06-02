@@ -52,3 +52,29 @@
 .fi-rr-shopping-cart-add{
     font-size: 1.5rem;
 }
+@media screen and (max-width: 768px){
+    .item_detail_container{
+        display: flex;
+        width: 80%;
+        flex-direction: column;
+        padding: 0;
+        margin: 1rem 0rem;
+    }
+    .item_detail_img {
+        position: static;
+        height: 400px;
+        transition: filter 0.2s, height 0.2s;
+        filter:none;
+        margin:0;
+    }
+    .item_detail_img:hover{
+        margin: 0;
+        height: 400px;
+        position:static;
+        filter: none;
+    }
+    .Btnes {
+        translate: 6rem 0px;
+        grid-area: 2 / 5 / 4 / 6;
+    }
+}
